@@ -6,7 +6,7 @@ import time
 from shortMsg import ShortMsg
 
 
-def getMsg(to_tel):
+def getMsg(search_tel):
     url = "http://apis-mgmt-test.dianhua.cn/smsCollect/"
     apikey = "yuloreeiauXtRkjH88RHit5kpvwK12np"
     country = 86
@@ -14,7 +14,7 @@ def getMsg(to_tel):
     ver = "1.0"
     app = "sms"
     v = "1"
-    to = to_tel #"18007305146 15903551769"
+    to = search_tel #"18007305146 15903551769"
     arguments = {"apikey":apikey, "country":country, "uid":uid, "ver":ver, "app":app, "v":v, "to":to}
     try:
         rep = requests.get(url=url, params=arguments)
