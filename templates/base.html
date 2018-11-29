@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/index_style.css">
+    {% block head %}
+    <title>测试短信接收平台</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="search">{% block search %}{% endblock %}</div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="show_msg_part">{% block show_msg_part %}{% endblock %}</div>
+    <hr />
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2018 by <a href="http://www.dianhua.cn/">Yulore</a>.
+        {% endblock %}
+    </div>
+</body>
+</html>

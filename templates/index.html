@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+<!--{% block title %}测试短信接收平台{% endblock %}-->
+{% block search %}
+
+	<h1>测试号码短信接收平台</h1>
+	<script src="../static/index_script.js"></script>
+	<div id="time"></div>
+	<script type="text/javascript">
+		function phone_check(form) {
+		    var tel_reg=/^[1][3-9][0-9]{9}$/;
+		    phone_str = form.phone_num.value.replace(/\s+/g, '');
+			if(phone_str=='') {
+				alert("请输入手机号码");
+				form.phone_num.focus();
+				return false;
+			}
+			if(!tel_reg.test(phone_str)) {
+				alert("请输入正确的手机号码");
+				form.phone_num.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+
+	<!--筛选区-->
+
+	<form  action="/search/" method="get" onsubmit="return phone_check(this)">
+		<!--
+		运营商:
+		<select name="operator_select">
+			<option selected="selected">全部</option>
+			<option>移动</option>
+			<option>联通</option>
+			<option>电信</option>
+		</select>
+		省市:
+		<select name="provice_select">
+			<option selected="selected">全国</option>
+			<option>北京</option>
+			<option>上海</option>
+		</select>
+		-->
+		电话号码: <input type="text" name="phone_num" maxlength="13">
+		<input type="submit" value="查询">
+	</form>
+{% endblock %}
+<br /><br />
+{% block content %}
+<br /><br />
+{% endblock %}
+<br /><br />
+{% block show_msg_part %}
+{% endblock %}

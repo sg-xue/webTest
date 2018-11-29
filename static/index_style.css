@@ -1,0 +1,81 @@
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    /*font-family: Tahoma, Verdana, Arial, sans-serif;*/
+}
+
+/*当前时间*/
+#time {
+	text-align: right;
+}
+
+h1 {
+	text-align: center;
+}
+/*导航控制*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*border: 1px solid #e7e7e7;*/
+    background-color: #99CCFF;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #FFCC99;
+}
+
+/*筛选控制*/
+
+
+form {
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+form select {
+	margin-right: 10px;
+}
+
+table {
+  border-spacing: 0px;
+  border: solid 1px #cccccc;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #ccdddd;
+  align-content: center;
+  border-spacing: 1;
+  padding: 4;
+}
+
+th, td {
+	border: solid 1px #cccccc;
+	text-align: center;
+}
+
+#content {
+    margin: 20;
+    padding: 5;
+    width: 80%;
+    height: 60%;
+}
+
+#footer {
+    float: center
+}

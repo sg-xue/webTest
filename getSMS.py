@@ -34,8 +34,8 @@ def getMsg(search_tel):
                     msg_list.append(short_msg)
                     # print "the objent is :", short_msg.__dict__
                 return msg_list
-            else:
-                return -1
+            # else:
+            #     return -1
         else:
             return "no message find"
     except requests.exceptions.ConnectionError:
